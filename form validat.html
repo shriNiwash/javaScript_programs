@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> FORM PROCESSING </title>
+<script language="javascript">
+function fun()
+{
+if(document.mf.text1.value=="")
+{
+alert("Enter your name")
+return false
+}
+}
+</script>
+</head>
+<body>
+<h2 align="center"> BASIC FORM PROCESSING </h2> <hr>
+<form name="mf">
+your name <br>
+<input type="text" name="text1" size="15"<br>
+your password <br>
+<input type="password" name="pass1" size="8"><br>
+<input type="button" name="b1" value="click here " onclick="fun()"><br>
+</form>
+</body>
+</html> 

@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>DIGITAL CLOCK</title>
+</head>
+<body>
+
+<script language="javascript">
+
+function fun()
+{
+mdate=new Date()
+h=mdate.getHours()
+m=mdate.getMinutes()
+s=mdate.getSeconds()
+document.F.H.value=h;
+document.F.M.value=m;
+document.F.S.value=s;
+}
+window.setInterval("fun()",1000)
+
+</script>
+<h2 align="center">D I G I T A L C L O C K </h2>
+<br><br>
+<form name="F">
+<center>
+<input type="text" name="H" size="2">
+<input type="text" name="M" size="2">
+<input type="text" name="S" size="2">
+</center>
+</form>
+</body>
+</html>

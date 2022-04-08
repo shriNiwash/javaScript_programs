@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> using Event object </title>
+<script language="javascript">
+function han1()
+{
+window.defaultStatus=event.screenX+","+event.screenY
+}
+function han2()
+{
+alert("Key code :"+ event.keyCode+"\n"+"Event type:"+event.type);
+}
+function han3()
+{
+alert("double clicked at X "+event.screenX+", Y :"+event.screenY)
+}
+</script>
+</head>
+<body  onMouseMove="han1()" onKeyPress="han2()">
+<h1 align="center"> THE EVENT </h1>
+<a href="something" onClick="return false" onDblClick="han3()">Double clicked here </a>
+</body>
+</html>
+   

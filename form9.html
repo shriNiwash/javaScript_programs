@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> form processing </title>
+<script language="javascript">
+function pf()
+{
+var ans="" ,col=""
+var index= document.form1.menu1.selectedIndex
+ans+="your selection :"
+col=document.form1.menu1.options[index].value;
+switch(col)
+{
+case "R":
+ans+="red"
+document.bgColor="red"
+break
+
+case "B":
+ans+="Blue"
+document.bgColor="blue"
+break
+
+case "G":
+ans+="Green"
+document.bgColor="Green"
+break
+}
+alert(ans)
+
+}
+</script>
+<head>
+<body>
+<form name="form1">
+<h1 align="center">PULL DOWN MENU </h1>
+<br>
+<select name="menu1">
+<option value="R">RED
+<option value="B">BLUE
+<option value="G">GREEn
+</select>
+<p>
+<a align="center"><input type="button" value="display selection" onclick="pf()">
+</form>
+</body>
+</html>
+ 
+

@@ -1,0 +1,102 @@
+/* how the form events are handled in javascript.*/
+<html>
+<head>
+<title>javascript form events </title>
+<script language="javascript">
+function isblank(s)
+{
+if (s.charAt(0)=="")
+return true
+else
+return false
+}
+function validate_lastname()
+{
+var str=document.form1.lname.value
+if(isblank(str))
+{
+alert("the last name cannot be empty")
+return false
+}
+return true
+}
+function validate_firstname()
+{
+var str=document.form1.fname.value
+if(isblank(str))
+{
+alert(" the first name cannot be blank")
+return false
+}
+return true
+}
+function validate_email()
+{
+var str=document.form1.email.value
+if(isblank(str))
+{
+alert(" the email field cannot be empety")
+return false
+}
+if(isvalid())
+{
+return true
+}
+return false
+}
+function isvalid()
+{
+var str=document.form1.email.value
+len=str.length
+for(i=1;i<len;i++)
+{
+if(str.charAt(i)=="@")
+{
+return true
+}
+}
+alert("you have entered invalid email message")
+return false
+}
+
+function processform()
+{
+if(!validate_firstname(document.form1.fname.value))return false 
+if(!validate_lastname(document.form1.lname.value)) return false 
+if(!validate_email(document.form1.email.value)) return false 
+if(!isvalid()) return false
+disp=open("","result")
+disp.document.write("<title>Result page</title>"+"<pre>")
+disp.document.write("<h2>"+ "Thanks for signing in"+"</h2>"+"<hr>"+"<br>")
+disp.document.write("First Name\t\t:"+document.form1.fname.value+"<br>")
+disp.document.write("Last Name\t\t:"+document.form1.lname.value+"<br>")
+disp.document.write("E-Mail  \t\t:"+document.form1.email.value+"<br>")
+disp.document.write("Your comments \t\t:"+document.form1.comment.value+"<br>")
+disp.document.write("</pre>")
+if (disp.confirm("Is this Information correct"))
+disp.close()
+}
+</script>
+</head>
+<body>
+<h2 align="center"> Handling form events </h2><hr>
+<center>
+<form name="form1">
+<p> First Name :<input type="text" name="fname" size=20 onchange="validate_firstname()"></p>
+<p> First Name :<input type="text" name="lname" size=20 onchange="validate_lastname()"></p>
+<p> E:mail Address:<input type="text" name="email" size=20 onchange="validate_email()"></p>
+<p> Comments :<textarea name="comment" rows=4 cols=20 onfocus="document.form1.comment.select()"> </textarea></p></center>
+<p align="center"><input type="button" value="submit form" onclick="return processform()"> <input type="Reset" value="reset form"> </p>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+</script>
+</head>
+<body>
+

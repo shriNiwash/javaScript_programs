@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>javascript</title>
+<script language="javascript">
+function cal(ch)
+{
+if(ch=="=")
+{
+document.form1.text1.value=eval(document.form1.text1.value)
+}
+else
+{
+if(ch=="C")
+{
+document.form1.text1.value="";
+}
+else
+{
+document.form1.text1.value +=ch;
+}
+}
+}
+</script>
+</head>
+<body bgcolor="sky blue">
+<h2> JAVASCRIPT</h2>
+<form name="form1">
+<input type="text" name="text1" size=30>
+<table>
+<tr>
+<td><input type="button" value="7" onclick="cal('7')">
+<td><input type="button" value="8" onclick="cal('8')">
+<td><input type="button" value="9" onclick="cal('9')">
+<td><input type="button" value="*" onclick="cal('*')">
+<tr>
+<td><input type="button" value="4" onclick="cal('4')">
+<td><input type="button" value="5" onclick="cal('5')">
+<td><input type="button" value="6" onclick="cal('6')">
+<td><input type="button" value="/" onclick="cal('/')">
+<tr>
+<td><input type="button" value="1" onclick="cal('1')">
+<td><input type="button" value="2" onclick="cal('2')">
+<td><input type="button" value="3" onclick="cal('3')">
+<td><input type="button" value="-" onclick="cal('-')">
+<tr>
+<td><input type="button" value="0" onclick="cal('0')">
+<td><input type="button" value="C" onclick="cal('C')">
+<td><input type="button" value="=" onclick="cal('=')">
+<td><input type="button" value="+" onclick="cal('+')">
+</table>
+</form>
+</body>
+</html>
+
+
+
+

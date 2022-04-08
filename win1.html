@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>javascript</title>
+<script language="javascript">
+function fun()
+{
+mvar=open("win2.html","win1","menubar=no, toolbar=no")
+}
+function fun2()
+{
+if(mvar.closed)
+{
+alert("window alreaady closed")
+window.status="sample.html already closed"
+}
+else
+{
+mvar.close()
+window.status="sample.html closed"
+}
+}
+
+</script>
+</head>
+<body>
+<center>
+<input type="button" name="but1" value="open window" onclick="fun()">
+<input type="button"name="but2"  value="close window" onclick="fun2()">
+</body>
+</html>

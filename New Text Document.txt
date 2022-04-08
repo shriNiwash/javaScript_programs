@@ -1,0 +1,84 @@
+/* how the form events are handled in javascript.*/
+<html>
+<head>
+<title>javascript form events </title>
+<script language="javascript">
+function isblank(s)
+{
+if (s.chartAt(0)=="")
+return true
+else
+return false
+}
+function validate_lastname()
+{
+var str=document.form1.lname.value
+if(isblank(str))
+{
+alert("the last name cannot be empty")
+return false
+}
+return true
+}
+function validate_firstname()
+{
+var str=document.form1.fname.value
+if(isblank(str))
+{
+alert(" the first name cannot be blank")
+return false
+}
+return true
+}
+function validate_email()
+{
+var str=document.form1.email.value
+if(isblank(str))
+{
+alert(" the email field cannot be empety")
+return false
+}
+if(isvalid())
+{
+return true
+}
+return false
+}
+function isvalid()
+{
+var str=document.form1.email.value
+len=str.length
+for(i=1;i<len;i++)
+{
+if(str.charAt(i)=="@")
+{
+return false
+}
+}
+alert("you have entered invalid email message")
+return false
+}
+
+return true
+}
+function processform()
+{
+if(!validate_firstname(document.form1.fname.value))
+return false 
+if(!validate_lastname(document.form1.lname.value))
+return false 
+if(!validate_email(document.form1.email.value))
+return false 
+if(!isvalid()) return false
+disp=open("","result")
+disp.document.write("<title>Result page</title>+"<pre>")
+disp.document.write("<h2>"+ "Thanks for signingin"+"</h2>"+"<hr>"+"<br>")
+disp.document.write("First Name\t\t:"+document.form1.fname.value+"<br>")
+disp.document.write("Last Name\t\t:"+document.form1.lname.value+"<br>")
+
+
+
+</script>
+</head>
+<body>
+

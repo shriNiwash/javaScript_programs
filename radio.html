@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>form processing </title>
+<script language="javascript">
+function pf()
+{
+var ans="";
+
+if(document.form1.gender[0].checked)
+ans+="your gender is male"
+else
+ans+="your gender is female"
+
+ alert(ans)
+}
+</script>
+</head>
+<body>
+<form name="form1">
+<br><br>
+<h1 align="center">APPLICATION FORM </h1>
+<input type="radio" name="gender" checked>Male <br>
+<input type="radio" name="gender" >Female <br>
+<p align="center"><input type="button" value="gender" onclick="pf()"><input type="reset" value="reset form"></p>
+</form>
+</body>
+</html>

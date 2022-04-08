@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>javascript</title>
+</head>
+<body>
+<h2 align="center"> BASIC FORM PROCESSING </h2>
+<form>
+Name: <input type ="text" name="t1" size="15"><br>
+Password: <input type="password" name="pass1" size="15"><br><br>
+</form>
+<hr>
+<form>
+Hobbies :<input type="checkbox" name="c1" value="reading">Reading 
+         <input type="checkbox" name="c1" >Treaking
+         <input type="checkbox" name="c1"> Music
+</form>
+<br>
+<form>
+<input type="radio" name="r1" checked>Male
+<input type="radio" name="r1" >Female
+<input type="button" name="b1" value="click here"><br>
+</form>
+<hr>
+<script language="javascript">
+len=document.forms.length
+document.write("<pre>")
+document.write("there are  "+len+"   forms elements"+"\n\n")
+for(i=0;i<len;i++)
+{
+num=document.forms[i].elements.length
+document.write("Form "+i+"  has  "+num+"  elements\n ")
+document.write("<hr>")
+}
+</script>
+</body>
+</html>
+ 

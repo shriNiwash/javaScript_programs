@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        i=0
+        window.defaultStatus="Time Intervals";
+        cols=new Array("red","green","white","purple")
+        function fun()
+        {
+            if(i>3){
+                i=0
+                document.bgColor=cols[index]
+                i++
+            }
+            else{
+                document.bgColor=cols[i]
+                i++
+            }
+
+        }
+        function startbk()
+{
+ref=setInterval("fun()",2000)
+}
+function stopbk()
+{
+clearInterval(ref);
+}
+
+        
+
+    </script>
+    <input type="button" value="b1" onclick="starbk()">
+</body>
+</html>

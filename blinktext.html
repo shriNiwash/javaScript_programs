@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>javascript</title>
+</head>
+<body>
+<script language="javascript">
+cols=new Array("black","white")
+index=0
+document.write("<h1 align='center'>KRISH</h1>")
+rel=setInterval("fun()",500)
+
+function fun()
+{
+if (index>1)
+{
+index=0
+document.fgColor=cols[index]
+index++
+}
+else
+{
+document.fgColor=cols[index]
+index++
+}
+}
+</script>
+</body>
+</html>
+

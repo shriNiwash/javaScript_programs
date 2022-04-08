@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>radio button </title>
+<script language="javascript">
+function pro()
+{
+var ans=""
+if (document.form1.gender[0].checked)
+{
+ans+="your grade is Male"
+
+}
+else if(document.form1.gender[1].checked)
+{
+ans+="your grade is feMale"
+
+}
+alert(ans)
+}
+</script>
+</head>
+<body>
+<hr>
+<h2> USING THE RADIO BUTTON</h2>
+<form name="form1">
+<input type="radio" name="gender">Male <br>
+<input type="radio" name="gender">Female<br>
+<input type="button" name="b2" value="find gender" Onclick='pro()'>
+</form>
+</body>
+</html>
+

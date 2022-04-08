@@ -1,0 +1,43 @@
+<html>
+<head>
+<title> using the pull down menu </title>
+<script language="javascript">
+function proc()
+{
+var ans=""
+var index=document.form1.menu1.selectedIndex;
+ans+="your selection :";
+col=document.form1.menu1.options[index].value;
+switch(col)
+{
+case "R" :
+ans+="Red"
+break;
+
+case "B" :
+ans+="blue"
+break;
+
+case "Y" :
+ans+="Yellow"
+break;
+}
+alert(ans);
+
+}
+</script>
+</head>
+<body>
+<form name="form1"
+<h1 align="center">PULL DOWN MENU  </h1>
+<br>
+<center>
+<select name="menu1">
+<option value="R">Red
+<option value="B">Blue
+<option value="Y"> Yellow
+</select>
+<p align="center"><input type="button" value="disply seleection" onClick="proc()">
+</form>
+</body>
+</html>
